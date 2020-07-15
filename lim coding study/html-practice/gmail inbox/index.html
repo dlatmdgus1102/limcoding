@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gmail box</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- th=table head h1같은 것.
+<th>값은 문법에 상관없이 임의로 지정해도 됨.
+문제 : <th scope=""> scope? 이거 배웠었나? 확인해보자 -->
+    <table class="inbox">
+      <!--<th> 값 action 등은 보이면 안되는 값. 
+kimbug님이 css로 안보이게 처리해줌. css를 안배워서 
+아직까지 원리는 잘 모르겠음.
+sr-only 뜻 : screen reader only 스크린 리더로 보이게
+처리하는 것. -->
+      <thead class="sr-only">
+        <tr>
+          <th scope="col">
+            Action
+          </th>
+          <th scope="col">
+            Sender
+          </th>
+          <th scope="col">
+            Tiltle
+          </th>
+          <th scope="col">
+            Time
+          </th>
+        </tr>
+      </thead>
+      <!-- 표 안의 내용들은 <tbody> 태그안에 넣는다. 
+분명 배웠는데 기억이 왜 안나지?ㅠㅠ -->
+      <tbody>
+        <tr class="unread">
+          <td>
+            <div class="inbox-actions">
+              <div class="inbox-checkbox">
+                <input type="checkbox" id="inbox-1" />
+                <label for="inbox" class="sr-only">select this eamil</label>
+              </div>
+              <button type="button" class="inbox-star">
+                <span class="sr-only">Add to favorites</span>
+              </button>
+            </div>
+          </td>
+          <!-- 왜 헷갈리지? <table>을 이해하지 못한 것 같다.
+-->
+          <td>
+            Goorm Edu
+          </td>
+          <td>
+            <a href="#">
+              <strong class="sr-only">unread:</strong>
+              <strong>
+                Rate your course: FRONTEND 101 WITH KIMBUG
+              </strong>
+              <span>
+                - Woohyeon. How’s everything going? We want to hear your opnion
+                on...
+              </span>
+            </a>
+          </td>
+          <td>
+            3:44 PM
+          </td>
+        </tr>
+        <tr class="read">
+          <td>
+            <div class="inbox-actions">
+              <div class="inbox-checkbox">
+                <input type="checkbox" id="inbox-1" />
+                <label for="inbox" class="sr-only">select this eamil</label>
+              </div>
+              <button type="button" class="inbox-star">
+                <span class="sr-only">Add to favorites</span>
+              </button>
+            </div>
+          </td>
+
+          <td>
+            Goorm Edu
+          </td>
+          <td>
+            <a href="#">
+              <stron class="sr-only">read:</stron>
+              <strong>
+                Rate your course: FRONTEND 101 WITH KIMBUG
+              </strong>
+              <span>
+                - Woohyeon. How’s everything going? We want to hear your opnion
+                on...
+              </span>
+            </a>
+          </td>
+          <td>
+            3:44 PM
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="./app.js"></script>
+  </body>
+</html>
